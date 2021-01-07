@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pl">
+<SCRIPT LANGUAGE="JavaScript">
+miesiac = new Array(12)
+miesiac[0] = "stycznia "
+miesiac[1] = "lutego "
+miesiac[2] = "marca "
+miesiac[3] = "kwietnia "
+miesiac[4] = "maja "
+miesiac[5] = "czerwca "
+miesiac[6] = "lipca "
+miesiac[7] = "sierpnia "
+miesiac[8] = "września "
+miesiac[9] = "października "
+miesiac[10] = "listopada "
+miesiac[11] = "grudnia "
+dzien = new Array(7)
+dzien[0] = "niedziela "
+dzien[1] = "poniedziałek "
+dzien[2] = "wtorek "
+dzien[3] = "środa "
+dzien[4] = "czwartek "
+dzien[5] = "piątek "
+dzien[6] = "sobota "
+function podaj_date(){
+var Dzisiaj = new Date()
+var Tygodnia = Dzisiaj.getDay()
+var Miesiac = Dzisiaj.getMonth()
+var Dnia = Dzisiaj.getDate()
+var Rok = Dzisiaj.getFullYear()
+if(Rok <= 99) Rok += 1900
+return dzien[Tygodnia] + "," + " " + Dnia + " " + miesiac[Miesiac] + ", " + Rok +"r." }
+//-->
+</SCRIPT>
+<SCRIPT>document.write("Dziś jest " + podaj_date())</SCRIPT>
+
+<head>
+	<meta charset="utf-8">
+	<title>Galeria</title>
+  <!-- link to main stylesheet -->
+		<link rel="stylesheet" type="text/css" href="/css/main.css">
+	<meta name="keywords" content="szablon strony">
+</head>
+<body>
+	<div style="text-align:center; width:800px; margin-left:auto; margin-right:auto;">
+	<table border="0" cellspacing="0" cellpadding="0">
+	<tr style="background-color:#009900">
+		<td height="175">&nbsp;</td>
+	</tr>
+	<tr>
+		<td height="625" style="background-color:#ffff00">
+		<table width="798" border="0" cellspacing="12">
+		<tr>
+			<td><a href="https://www.itselect.pl/wp-content/uploads/2020/02/automatyka-przemyslowa.jpg">
+			<img src="https://www.itselect.pl/wp-content/uploads/2020/02/automatyka-przemyslowa.jpg" width="250" height="188"></a></td>
+			<td><a href="https://vegmet-serwis.pl/wp-content/uploads/2013/07/Mechanika_Vegmet_Serwis.jpg">
+			<img src="https://vegmet-serwis.pl/wp-content/uploads/2013/07/Mechanika_Vegmet_Serwis.jpg" width="250" height="188"></a></td>
+			<td><a href="https://mpltechma.pl/files/sites/10/elektronika_new.jpg">
+			<img src="jastarnia_02_mini.jpghttps://mpltechma.pl/files/sites/10/elektronika_new.jpg" width="250" height="188"></a></td>
+		</tr>
+		<tr>
+			<td>Automatyka Przemysłowa</td>
+			<td>Silnik</td>
+			<td>Element elektroniczny</td>
+		</tr>
+		<tr>
+			<td><a href="https://operon.pl/var/operon/storage/images/media/pliki/do_kuriera/operon-programowanie-jezyk-xxi-wieku/212370-1-pol-PL/Operon-Programowanie-jezyk-XXI-wieku.jpg">
+			<img src="https://operon.pl/var/operon/storage/images/media/pliki/do_kuriera/operon-programowanie-jezyk-xxi-wieku/212370-1-pol-PL/Operon-Programowanie-jezyk-XXI-wieku.jpg" width="250" height="188"></a></td>
+			<td><a href="https://zrobotyzowany.pl/_uploaded/roboty/roboty-fabryka.jpg">
+			<img src="https://zrobotyzowany.pl/_uploaded/roboty/roboty-fabryka.jpg" width="250" height="188"></a></td>
+			<td><a href="https://www.rajbud.biz/img/narzedzia-i-elektronarzedzia.jpg">
+			<img src="https://www.rajbud.biz/img/narzedzia-i-elektronarzedzia.jpg" width="250" height="188"></a></td>
+		</tr>
+		<tr>
+			<td>Ściana kodu</td>
+			<td>Ramiona robotów</td>
+			<td>Narzędzia</td>
+		</tr>
+		</table></td>
+		</tr>
+	</table>
+</div>
+
+<footer>
+<a href="https://dominikkilanowski.github.io/">Powrót do strony głównej</a>
+</footer>
+
+</body>
+</html>
+ 
