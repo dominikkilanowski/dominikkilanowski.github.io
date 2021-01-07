@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 	<SCRIPT LANGUAGE="JavaScript">
-<!-- // skrypt pobrano z http://szablony.freeware.info.pl
 miesiac = new Array(12)
 miesiac[0] = "stycznia "
 miesiac[1] = "lutego "
@@ -34,6 +33,7 @@ return dzien[Tygodnia] + "," + " " + Dnia + " " + miesiac[Miesiac] + ", " + Rok 
 //-->
 </SCRIPT>
 <SCRIPT>document.write("Dziś jest " + podaj_date())</SCRIPT>
+	
 	<head>
 		<h1 style="background-color:DodgerBlue;">Hello World</h1>
 		<title>Dzień dobry!</title>
@@ -43,9 +43,34 @@ return dzien[Tygodnia] + "," + " " + Dnia + " " + miesiac[Miesiac] + ", " + Rok 
 	<body>
 		<nav>
     		<ul>
-        		<li><a href="/">Home</a></li>
-	        	<li><a href="/about">About</a></li>
-			<li><a href="/">Ciekawostki</a></li>
+			<form name="mycombowopt">
+<select  name="example" size=1>
+	<option value="https://www.fee.put.poznan.pl/>Strona wydziału WARiE</option>
+	<option value="https://pl.wikipedia.org/wiki/Mechanika">Mechanika WIKI</option>
+  </select> <input type="button" value="Go!" onClick="gothere()"> <br>
+  <input type="checkbox" name="windowoption" value="ON">Otwórz w oddzielnym oknie</p>
+</form>
+
+<script language="javascript">
+<!--
+
+
+
+function gothere(){
+var thebox=document.mycombowopt
+if (thebox.windowoption.checked){
+if (!window.newwindow)
+newwindow=window.open("")
+newwindow.location=
+thebox.example.options[thebox.example.selectedIndex].value
+}
+else
+location=
+thebox.example.options[thebox.example.selectedIndex].value
+}
+//-->
+</script>
+        		
     		</ul>
 		</nav>
 		<div class="container">
