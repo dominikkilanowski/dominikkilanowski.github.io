@@ -1,11 +1,110 @@
 <!DOCTYPE html>
 <html>
-<body>
- <title>Ciekawostki</title>
-    <!-- link to main stylesheet -->
+<SCRIPT LANGUAGE="JavaScript">
+miesiac = new Array(12)
+miesiac[0] = "stycznia "
+miesiac[1] = "lutego "
+miesiac[2] = "marca "
+miesiac[3] = "kwietnia "
+miesiac[4] = "maja "
+miesiac[5] = "czerwca "
+miesiac[6] = "lipca "
+miesiac[7] = "sierpnia "
+miesiac[8] = "września "
+miesiac[9] = "października "
+miesiac[10] = "listopada "
+miesiac[11] = "grudnia "
+dzien = new Array(7)
+dzien[0] = "niedziela "
+dzien[1] = "poniedziałek "
+dzien[2] = "wtorek "
+dzien[3] = "środa "
+dzien[4] = "czwartek "
+dzien[5] = "piątek "
+dzien[6] = "sobota "
+function podaj_date(){
+var Dzisiaj = new Date()
+var Tygodnia = Dzisiaj.getDay()
+var Miesiac = Dzisiaj.getMonth()
+var Dnia = Dzisiaj.getDate()
+var Rok = Dzisiaj.getFullYear()
+if(Rok <= 99) Rok += 1900
+return dzien[Tygodnia] + "," + " " + Dnia + " " + miesiac[Miesiac] + ", " + Rok +"r." }
+//-->
+</SCRIPT>
+<SCRIPT style="color:rgb(255, 165, 0);">document.write("Dziś jest " + podaj_date())</SCRIPT>
+	
+<head>
+	<!-- link to main stylesheet -->
 		<link rel="stylesheet" type="text/css" href="/css/main.css">
-  
-<h1>Strona w budowie</h1>
+  <body style="background-color:powderblue;">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+</style>
+</head>
+<body>
+
+<title>Ciekawostki</title>
+
+<p>A Definicja:</p>
+<button type="button" class="collapsible">Definicja</button>
+<div class="content">
+  <p>nieznany wcześniej, interesujący szczegół lub fakt</p>
+</div>
+
+<p>Poniżej ciekawostki:</p>
+<button type="button" class="collapsible">Ciekawostka 1</button>
+<div class="content">
+  <p>Robot wzmocni pracę chirurgów.W dziedzinie medycyny roboty cieszą się coraz to większą powodzeniem. Najnowsza maszyna, która jest przeznaczona do prac medycznych została wymyślona przez naukowców z Holandii i ma za sobą już pierwszy udany zabieg. MUSA ma pomóc lekarzom na polu mikrochirurgii.</p>
+</div>
+<button type="button" class="collapsible">Ciekawostka 2</button>
+<div class="content">
+  <p>Firma Ocean Infinity stworzyła strategię floty autonomicznych statków badawczych, które pomogą w przeszukiwaniu mórz i oceanów.</p>
+</div>
+<button type="button" class="collapsible">Ciekawostka 3</button>
+<div class="content">
+  <p>Chiński koncern Huawei na rozpoczęcie nowego roku pokazał pierwszy sklep, w którym wszystkie prace wykonują roboty. Sklep powstał w małej prowincji o nazwie Wuhan.</p>
+</div>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+
 
 
 	<footer>
