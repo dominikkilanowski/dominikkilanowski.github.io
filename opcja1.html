@@ -1,26 +1,15 @@
-<!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-        <title>WCG -- HTML5 360 Viewer Example</title>
- 
-        <link rel="Stylesheet" href="css/html5.360.viewer.css"/>
-<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-<!--[if lt IE 9]>
-<script src="https://www.webcodegeeks.com/wp-content/litespeed/localres/oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-<script src="https://www.webcodegeeks.com/wp-content/litespeed/localres/oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-<![endif]-->
-     </head>
-     <body>
-         <h1>WCG -- HTML5 360 Viewer Example</h1>
- 
-         <img id="panorama" src="https://thumbs.dreamstime.com/t/elbrus-g%C3%B3ry-panorama-13339969.jpg" />
- 
-         <script src="js/html5.panorama.viewer.js"></script>
- 
-     </body>
+<!DOCTYPE>
+<html>
+<head>
+<script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
+</head>
+<body>
+<a-scene>
+<a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
+<a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
+<a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
+<a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+<a-sky color="#ECECEC"></a-sky>
+</a-scene>
+</body>
 </html>
