@@ -4,8 +4,12 @@
 <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
 <body style='margin : 0px; overflow: hidden;'>
   <a-scene embedded arjs>
-     <a-text value="Hello, World!"></a-text>
-   <iframe src="https://clara.io/embed/b38a483f-abd9-4c8d-b991-6d768d90b880?renderer=webgl" width="800" height="600" allowfullscreen></iframe>
+   
+    <a-assets>
+  <a-asset-item id="three" src="https://clara.io/embed/b38a483f-abd9-4c8d-b991-6d768d90b880?renderer=webgl"></a-asset-item>
+</a-assets>
+<!-- use your gltf model -->
+<a-entity gltf-model="##tree"></a-entity>
     <a-marker-camera preset='hiro'></a-marker-camera>
   </a-scene>
 </body>
