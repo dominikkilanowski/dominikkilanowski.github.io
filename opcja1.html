@@ -3,11 +3,14 @@
 <!-- include ar.js for A-Frame -->
 <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
 <body style='margin : 0px; overflow: hidden;'>
-  <a-scene background="color: #ECECEC">
-      <a-assets>
-        <a-asset-item id="cityModel" src="https://cdn.glitch.com/324a5290-5aa7-4efc-92d6-ae0736433b12%2Fspinosaurus.glb"></a-asset-item>
-      </a-assets>
-      <a-entity gltf-model="#cityModel" scale="0.01 0.01 0.01"></a-entity>
+  <a-scene embedded arjs>
+ 
+      <!--Adding a glTF 2.0 model to your scene-->
+      <a-entity
+      gltf-model-next="src: url(modele/scene1.gltf);"
+      >
+      </a-entity>
+   
     <a-marker-camera preset='hiro'></a-marker-camera>
   </a-scene>
 </body>
