@@ -15,7 +15,7 @@ const animate = () => {
   degrees = shiftDegrees(degrees);
   const color = `hsl(${degrees}, 100%, 50%)`;
   const variation = Math.sin(Date.now() / 1000);
-  const position = `0 ${1.5 + variation} -2`;
+  const position = `0 ${1.5 + variation} 0`;
   const rotation = `-90 0 0`;
 
   sphere.setAttribute('color', color);
